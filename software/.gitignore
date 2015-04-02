@@ -2,4 +2,4 @@ badfile
 call_shellcode
 exploit
 stack
-
+setuidroot_sample

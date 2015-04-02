@@ -29,11 +29,9 @@ make
 Run stack I got shell prompt '$'
 
 ```bash
-$ ./stack
-$ id
-uid=0(root) gid=0(root) euid=1000(seed) groups=1000(seed),0(root)
+./stack
+$
 ```
-Previously, it was:
-```bash
-uid=0(root) gid=0(root) groups=0(root)
-```
+
+### Set UID to root
+setuidroot_sample.c does not work
