@@ -7,3 +7,4 @@
 Ubuntu user
 
     seed/dees
+    root/seedubuntu
