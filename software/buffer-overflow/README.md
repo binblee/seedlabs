@@ -1,5 +1,8 @@
 # Buffer Overflow Lab
 
+### Documents
+[Smashing the Stack](http://cecs.wright.edu/people/faculty/tkprasad/courses/cs781/alephOne.html)
+
 ### Initial setup (2.1)
 
 Run sysctl to disable OS address space randomization
@@ -32,6 +35,3 @@ Run stack I got shell prompt '$'
 ./stack
 $
 ```
-
-### Set UID to root
-setuidroot_sample.c does not work

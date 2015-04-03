@@ -1,4 +1,4 @@
-all: call_shellcode stack exploit setuidroot_sample
+all: call_shellcode stack exploit
 
 call_shellcode: call_shellcode.c
 	gcc -z execstack -o call_shellcode call_shellcode.c
@@ -10,6 +10,7 @@ stack: stack.c
 exploit: exploit.c
 	gcc -o exploit exploit.c
 
-setuidroot_sample: setuidroot_sample.c
-	sudo gcc -o setuidroot_sample setuidroot_sample.c
-	sudo chmod 4755 setuidroot_sample
+clean:
+	rm exploit
+	rm -f stack
+	rm call_shellcode
