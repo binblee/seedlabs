@@ -11,6 +11,12 @@ exploit: exploit.c
 	gcc -o exploit exploit.c
 	./exploit
 
+randomon:
+	sudo sysctl -w kernel.randomize_va_space=2
+
+randomoff:
+	sudo sysctl -w kernel.randomize_va_space=0
+
 clean:
 	rm exploit
 	rm -f stack
