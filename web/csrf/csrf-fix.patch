@@ -1,0 +1,61 @@
+diff -aur collabtive-original/manageuser.php collabtive-new/manageuser.php
+--- collabtive-original/manageuser.php	2015-04-07 14:48:30.733576124 +0800
++++ collabtive-new/manageuser.php	2015-04-07 18:15:20.993871843 +0800
+@@ -70,7 +70,7 @@
+ 		// Send e-mail with new password
+ 		$themail = new emailer($settings);
+ 		$themail->send_mail($email, $langfile["projectpasswordsubject"], $langfile["hello"] . ",<br /><br/>" . $langfile["projectpasswordtext"] . "<br /><br />" .  $langfile["newpass"] . ": " . "$newpass<br />" . $langfile["login"] . ": <a href = \"$url\">$url</a>");
+-		
++
+ 		$template->assign("success", 1);
+ 		$template->display("resetpassword.tpl");
+ 	}
+@@ -198,6 +198,14 @@
+     $_SESSION['userlocale'] = $locale;
+     $_SESSION['username'] = $name;
+ 
++    $sid_in_url = getArrayVal($_POST, "sid");
++    $sid_in_session = $_COOKIE["PHPSESSID"];
++
++    if ( $sid_in_url != $sid_in_session ){
++        echo "You're not allowed to do it." ;
++        exit(1);
++    }
++
+     if (!empty($_FILES['userfile']['name']))
+     {
+         $fname = $_FILES['userfile']['name'];
+@@ -432,4 +440,4 @@
+     echo $vCard->getCardOutput();
+ }
+ 
+-?>
+\ No newline at end of file
++?>
+diff -aur collabtive-original/templates/standard/edituserform.tpl collabtive-new/templates/standard/edituserform.tpl
+--- collabtive-original/templates/standard/edituserform.tpl	2015-04-07 14:30:31.029550396 +0800
++++ collabtive-new/templates/standard/edituserform.tpl	2015-04-07 18:11:53.241866893 +0800
+@@ -11,6 +11,7 @@
+ <form class="main" method="post" action="manageuser.php?action=edit" enctype="multipart/form-data" {literal}onsubmit="return validateCompleteForm(this,'input_error');"{/literal}>
+ <fieldset>
+ 
++<input type = "hidden" name = "sid" value = "" />
+ 
+ <table cellpadding="0" cellspacing="0" border="0">
+ <tr>
+@@ -220,7 +221,7 @@
+ 					<tr>
+ 						<td></td>
+ 						<td class="right">
+-							<button type="submit" onfocus="this.blur()">{#send#}</button>
++							<button type="submit" onclick = "this.form.sid.value = document.cookie.split('=')[1]" onfocus="this.blur()">{#send#}</button>
+ 						</td>
+ 					</tr>
+ 				</tbody>
+@@ -261,4 +262,4 @@
+ </div> {*content-left END*}
+ 
+ {include file="sidebar-a.tpl"}
+-{include file="footer.tpl"}
+\ No newline at end of file
++{include file="footer.tpl"}

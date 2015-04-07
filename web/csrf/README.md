@@ -15,4 +15,13 @@ replace below file with index.html under attacker/
 
 ### Counter measure solution
 
-TBD
+run make to generate patch files
+```bash
+make
+```
+copy csrf-fix.patch to /var/www/CSRF/Collabtive of VM.
+run this command to apply patch and restart apache2
+```bash
+sudo patch -p1 < csrf-fix.patch
+sudo service apache2 restart
+```
