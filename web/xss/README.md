@@ -2,7 +2,7 @@
 
 ### task 6
 
-Create xss.js file in www.csrflabattacker.com root directory.
+Create xss.js file in csrflabattacker root directory.
 
 ```javascript
 var on=new Ajax.Updater("onlinelist","manageuser.php?action=onlinelist",
