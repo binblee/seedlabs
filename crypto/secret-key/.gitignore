@@ -1,2 +1,4 @@
 *.bmp
 !pic_original.bmp
+*.txt
+!plain.txt
