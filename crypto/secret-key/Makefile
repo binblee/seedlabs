@@ -2,7 +2,7 @@ KVALUE=00112233445566778889aabbccddeeff
 IVVALUE=0102030405060708
 OPTIONS=-K $(KVALUE) -iv $(IVVALUE)
 
-all: task1 task2
+all: task1 task2 task3 task4 task5-sample task5
 
 task1:
 	openssl enc -aes-128-cbc -e -in pic_original.bmp -out pic_encrypted.bmp $(OPTIONS)
@@ -73,15 +73,20 @@ task4:
 
 INC=/usr/include/
 LIB=/usr/lib/i386-linux-gnu/
-task5:
+task5-sample:
 	gcc -I$(INC) -L$(LIB) -o sample_encrypt sample_encrypt.c -lssl -lcrypto
 	printf "Some Crypto Text" > crypttext
 	./sample_encrypt
 	openssl aes-128-cbc -d -K 000102030405060708090A0B0C0D0E0F -iv 01020304050607080807060504030201 -in crypttext-e -out crypttext-d
 	diff crypttext crypttext-d
 
+task5:
+	gcc -std=c11 -I$(INC) -L$(LIB) -o findkey findkey.c -lssl -lcrypto
+	./findkey
+
 clean:
 	rm -f `ls *.bmp | grep -v pic_original.bmp`
 	rm -f `ls *.txt | grep -v plain.txt`
 	rm -f crypttext*
 	rm -f sample_encrypt
+	rm -f findkey
