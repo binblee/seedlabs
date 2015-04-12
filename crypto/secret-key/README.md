@@ -23,3 +23,17 @@ make task3
 ```bash
 make task4
 ```
+
+### Task 5 Programming using the Crypto Library
+
+Install libssl-dev
+
+```bash
+sudo apt-get install libssl-dev
+```
+run sample c using aes-128-cbc
+
+```bash
+make task5
+#run sample_encrypt
+```

@@ -2,3 +2,5 @@
 !pic_original.bmp
 *.txt
 !plain.txt
+sample_encrypt
+crypttext*

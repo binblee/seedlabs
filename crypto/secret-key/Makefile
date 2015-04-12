@@ -71,6 +71,17 @@ task4:
 	hd plain20-bf-ofb.txt
 	hd plain24-bf-ofb.txt
 
+INC=/usr/include/
+LIB=/usr/lib/i386-linux-gnu/
+task5:
+	gcc -I$(INC) -L$(LIB) -o sample_encrypt sample_encrypt.c -lssl -lcrypto
+	echo "Some Crypto Text" > crypttext
+	./sample_encrypt
+	openssl aes-128-cbc -d -K 000102030405060708090A0B0C0D0E0F -iv 01020304050607080807060504030201 -in crypttext-e -out crypttext-d
+	diff crypttext crypttext-d
+
 clean:
-	rm `ls *.bmp | grep -v pic_original.bmp`
-	rm `ls *.txt | grep -v plain.txt`
+	rm -f `ls *.bmp | grep -v pic_original.bmp`
+	rm -f `ls *.txt | grep -v plain.txt`
+	rm -f crypttext*
+	rm -f sample_encrypt
