@@ -71,17 +71,15 @@ task4:
 	hd plain20-bf-ofb.txt
 	hd plain24-bf-ofb.txt
 
-INC=/usr/include/
-LIB=/usr/lib/i386-linux-gnu/
 task5-sample:
-	gcc -I$(INC) -L$(LIB) -o sample_encrypt sample_encrypt.c -lssl -lcrypto
+	gcc -o sample_encrypt sample_encrypt.c -lcrypto
 	printf "Some Crypto Text" > crypttext
 	./sample_encrypt
 	openssl aes-128-cbc -d -K 000102030405060708090A0B0C0D0E0F -iv 01020304050607080807060504030201 -in crypttext-e -out crypttext-d
 	diff crypttext crypttext-d
 
 task5:
-	gcc -std=c11 -I$(INC) -L$(LIB) -o findkey findkey.c -lssl -lcrypto
+	gcc -std=c99 -o findkey findkey.c -lcrypto
 	./findkey
 
 clean:
