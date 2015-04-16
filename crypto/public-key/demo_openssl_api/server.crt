@@ -1,0 +1,68 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4099 (0x1003)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=US, ST=New York, L=Syracuse, O=SEED Labs Inc., OU=PKI Lab, CN=PKILabCA.com/emailAddress=admin@PKILabCA.com
+        Validity
+            Not Before: Jan  4 13:40:43 2011 GMT
+            Not After : Jan  1 13:40:43 2021 GMT
+        Subject: C=US, ST=New York, L=Syracuse, O=SEED Labs Inc., OU=PKI Lab, CN=PKILabServer.com/emailAddress=admin@PKILabServer.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:af:34:a9:26:ba:43:70:7d:69:3a:42:5f:99:e3:
+                    68:ac:00:e6:1e:ea:c8:b9:9b:62:8f:aa:8c:c4:15:
+                    64:7a:d5:8b:9c:ce:11:0f:fd:8f:b8:c6:41:80:90:
+                    d5:43:71:57:6d:8c:99:eb:2e:50:95:fd:e9:56:8c:
+                    27:b3:d6:a3:f3:b9:89:57:66:20:94:11:73:a2:e5:
+                    20:ce:5d:c6:0a:b8:c1:50:74:8b:9f:cc:8c:de:8d:
+                    03:5e:37:a9:f6:c2:61:84:19:e6:67:1e:eb:ff:32:
+                    8f:da:f7:70:2a:75:be:78:17:ce:90:14:b8:4b:db:
+                    cf:14:a8:80:68:9d:47:59:cf
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                77:46:62:F5:B3:A7:B8:F5:40:98:E7:89:B3:E6:73:85:2D:80:A7:44
+            X509v3 Authority Key Identifier: 
+                keyid:CE:CB:48:16:69:18:2D:C5:65:0B:78:D9:5B:64:45:CD:02:E1:4D:23
+                DirName:/C=US/ST=New York/L=Syracuse/O=SEED Labs Inc./OU=PKI Lab/CN=PKILabCA.com/emailAddress=admin@PKILabCA.com
+                serial:CE:9F:7D:EE:79:F7:E0:F0
+
+    Signature Algorithm: md5WithRSAEncryption
+        ac:f5:5f:23:4f:53:40:e6:da:3a:b4:ff:a8:fa:23:d8:d3:19:
+        9f:78:84:85:5e:1a:be:15:5a:1e:80:73:66:97:5f:4c:8f:eb:
+        99:7a:c9:c0:01:86:ef:fb:91:33:58:b8:5e:de:e6:bf:dc:dd:
+        62:dc:5b:89:53:00:45:db:c7:91:83:01:62:cd:cd:08:54:8b:
+        5d:65:b5:ac:c8:40:bd:f7:fc:ad:8d:03:59:2f:8b:db:c4:6e:
+        f2:15:4f:83:4b:b5:f3:2b:ba:75:73:9e:aa:e7:ab:64:92:51:
+        37:7a:95:68:c6:3b:cc:23:49:cd:a7:f3:4a:3e:7c:2f:82:e4:
+        29:fd
+-----BEGIN CERTIFICATE-----
+MIID3zCCA0igAwIBAgICEAMwDQYJKoZIhvcNAQEEBQAwgZgxCzAJBgNVBAYTAlVT
+MREwDwYDVQQIEwhOZXcgWW9yazERMA8GA1UEBxMIU3lyYWN1c2UxFzAVBgNVBAoT
+DlNFRUQgTGFicyBJbmMuMRAwDgYDVQQLEwdQS0kgTGFiMRUwEwYDVQQDEwxQS0lM
+YWJDQS5jb20xITAfBgkqhkiG9w0BCQEWEmFkbWluQFBLSUxhYkNBLmNvbTAeFw0x
+MTAxMDQxMzQwNDNaFw0yMTAxMDExMzQwNDNaMIGgMQswCQYDVQQGEwJVUzERMA8G
+A1UECBMITmV3IFlvcmsxETAPBgNVBAcTCFN5cmFjdXNlMRcwFQYDVQQKEw5TRUVE
+IExhYnMgSW5jLjEQMA4GA1UECxMHUEtJIExhYjEZMBcGA1UEAxMQUEtJTGFiU2Vy
+dmVyLmNvbTElMCMGCSqGSIb3DQEJARYWYWRtaW5AUEtJTGFiU2VydmVyLmNvbTCB
+nzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEArzSpJrpDcH1pOkJfmeNorADmHurI
+uZtij6qMxBVketWLnM4RD/2PuMZBgJDVQ3FXbYyZ6y5Qlf3pVowns9aj87mJV2Yg
+lBFzouUgzl3GCrjBUHSLn8yM3o0DXjep9sJhhBnmZx7r/zKP2vdwKnW+eBfOkBS4
+S9vPFKiAaJ1HWc8CAwEAAaOCASwwggEoMAkGA1UdEwQCMAAwLAYJYIZIAYb4QgEN
+BB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBR3RmL1
+s6e49UCY54mz5nOFLYCnRDCBzQYDVR0jBIHFMIHCgBTOy0gWaRgtxWULeNlbZEXN
+AuFNI6GBnqSBmzCBmDELMAkGA1UEBhMCVVMxETAPBgNVBAgTCE5ldyBZb3JrMREw
+DwYDVQQHEwhTeXJhY3VzZTEXMBUGA1UEChMOU0VFRCBMYWJzIEluYy4xEDAOBgNV
+BAsTB1BLSSBMYWIxFTATBgNVBAMTDFBLSUxhYkNBLmNvbTEhMB8GCSqGSIb3DQEJ
+ARYSYWRtaW5AUEtJTGFiQ0EuY29tggkAzp997nn34PAwDQYJKoZIhvcNAQEEBQAD
+gYEArPVfI09TQObaOrT/qPoj2NMZn3iEhV4avhVaHoBzZpdfTI/rmXrJwAGG7/uR
+M1i4Xt7mv9zdYtxbiVMARdvHkYMBYs3NCFSLXWW1rMhAvff8rY0DWS+L28Ru8hVP
+g0u18yu6dXOequerZJJRN3qVaMY7zCNJzafzSj58L4LkKf0=
+-----END CERTIFICATE-----
