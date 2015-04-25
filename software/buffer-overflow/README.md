@@ -29,9 +29,9 @@ Makefile created for call_shellcode.c, exploit.c and stack.c
 ```bash
 make
 ```
-Run stack I got shell prompt '$'
+Run stack I got shell prompt '#'
 
 ```bash
 ./stack
-$
+#
 ```
